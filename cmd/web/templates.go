@@ -2,15 +2,17 @@ package main
 
 import (
 	"path/filepath"
-	"snippetbox.jocke.rs/internal/models"
 	"text/template"
 	"time"
+
+	"snippetbox.jocke.rs/internal/models"
 )
 
 type templateData struct {
 	CurrentYear int
 	Snippet     *models.Snippet
 	Snippets    []*models.Snippet
+	Form        any
 }
 
 func humanDate(t time.Time) string {
